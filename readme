@@ -1,0 +1,39 @@
+IPC methods for finding words in large text files:
+
+By: Jake Braswell & Max Hensler
+
+	CONTRIBUTION
+
+Both partners though originally thought we would divide and conquer however only when we both worked togeth did anything work.
+Therefore, both partners had equal contribution on both working parts.
+
+
+	HOW IT WORKS
+
+We got pipes to work after placing the contents of the text file in a vector, then to a char*. We then piped that from the parent to 
+the child where the child read through the information and placed every line that contained the matching work in a vector. Finally that
+vector was sorted, converted into a char* and piped back to the parent for printing.
+
+The socket was done using the pipe file however, replacing pipes with a single socket. 
+
+	DIRECTIONS
+
+After traveling to the directory that contains this file: 
+	Type in 'make pipe' to compile the pipe with pre-selected test cases
+
+	Type in 'make socket' to compile the socket with pre-selected test cases
+
+	Type in 'make custom_pipe' to compile the pipe without pre-selected test cases
+
+	Type in 'make custom_socket' to compile the socket without pre-selected test cases
+
+If you used 'custom_pipe' or 'custom_socket':
+	Type either './custom_pipe' or './custom_socket' respectively
+	After making your selection type you'll be given the option to enter the pathway to the file
+	You will then be prompeted to enter the word you want to search for.
+
+	After these have been entered and you've pressed 'Enter' the program should start and 
+	return in alphabetical order the lines that contained the word you wanted to search for.
+	
+Otherwise:
+		Type in './pipe' or './socket' to run our test case
